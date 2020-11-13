@@ -7,6 +7,10 @@ body {
     margin: auto;
 }
 
+h1 {
+    font-color:rgb(30,30,30);
+}
+
 
 header {
     height: 40px;

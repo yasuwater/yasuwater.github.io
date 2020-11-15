@@ -3,14 +3,70 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>水道料金可視化</title>
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="Sample0.js"></script>
+        <title>test</title>
+        <link rel="stylesheet" href="/CSS/style2.css">
+        <script type="text/javascript" src="/js/Sample0.js"></script>
     </head>
 
     <body>
         <header>
-            <h1>水道料金可視化サイト</h1>
+            <div class="top_wrapper">
+                <div class="top_contents">
+                    <div class="top_title">
+                        <h1>あなたの水道料金が何に使われているかを可視化するサイト</h1>
+                    </div>
+                    <p class="top_message">
+                        　日本の水道普及率は2018年現在「98%」です。これはつまり、日本全国
+                        いつでもどこでも蛇口を捻れば清浄な水を手に入れることができると言って過言ではないでしょう。<br>
+                        　こんなのは日本に住む我々にとっては至極当たり前のことであり、「なぜ蛇口から水が出るのだろう？」と日々考えながら生活している人はほぼ居ないでしょう。
+                        しかし、蛇口まで水が届くまでには、取水、浄水、配水、給水などのプロセスがあり、まぎれもなくそれら水道施設を計画する
+                        人がおり、建設する人がおり、維持管理する人が居るわけです。<br>
+                        　では水道施設の整備費用はどこから捻出されているか知っていますか？　税金ではありませんよ。
+                        我々が2か月に一回支払っている水道料金です。水道施設の整備は基本的に100%水道料金で賄われています。
+                        我々が水を使い、対価として水道料金を支払い、そのお金で次の水道の整備を行っているのです。
+                        水道料金が高いなー、安くならないかなー、気持ちは分かります。<br>
+                        このサイトは貴方が支払った水道料金が、どのような水道整備に当てられているのか具体的に示し、
+                        水道料金を支払うことの意義を少しでも感じていただければと思い作成しました。
+                    </p>
+
+                    <div class="start btn">
+                        <a href="">はじめる</a>
+                    </div>   
+                    <p>このサイトでは東京、大阪、名古屋の水道料金をシュミレーションできます
+                        ぜひ貴方のお住まいの水道料金と比較してみてください。
+                    </p>
+                </div>                 
+            </div>
+
+        <div class="radio_fam" title="使用水量が不明な場合">
+
+            <p>使用水量が不明な場合は、世帯人数から平均値を計算できます。</p>
+            <div class="radio_form">
+                <input type="radio" name="a1" value=1 onchange="chk1(this.value)" checked>1人
+                <input type="radio" name="a1" value=2 onchange="chk1(this.value)">2人
+                <input type="radio" name="a1" value=3 onchange="chk1(this.value)">3人
+                <input type="radio" name="a1" value=4 onchange="chk1(this.value)">4人
+                <input type="radio" name="a1" value=5 onchange="chk1(this.value)">5人
+                <input type="radio" name="a1" value=6 onchange="chk1(this.value)">6人以上
+            </div>
+            <div>
+                <span id="fam_cnt" class="tx1">1</span>人世帯の2か月間の平均使用水量は<span id="avg" class = "tx1">16.4</span>m3です。<br>
+            　  <a href="https://www.waterworks.metro.tokyo.jp/kurashi/shiyou/jouzu.html">引用:東京と水道局平成28年度生活用水実態調査</a>   
+            </div>    
+        </div>
+
+            <p>2か月当たりの使用水量を入力</p>
+            <form>
+                <div class="fom1">
+                    <input type="text" id="input_num" class="inp" value="">
+                    <p>m3/2か月</p>
+                    <input type="button" onclick="cal1()" class="form_btn" value="試算">
+                </div>
+            </form>
+            
+            <p id="cal_test"></p>
+            <div>あなたの払った水道料金で、年間<span id="output2">0</span>ｍの水道管が布設されています。</div>
+
             <button type="button" onclick="MyFunction1()">クリックしてください</button>
             <p id="get_para">段落の内容を表示します</p>
             <p id="txt">時刻を表示します</p>         
@@ -21,5 +77,8 @@
             </p>
 
         </header>
+
     </body>
+
+
 </html>

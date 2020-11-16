@@ -25,6 +25,7 @@ font-weight: bold;
 .top_contents {
     display: inline-block;
     margin-top: 50px;
+    text-align:center;
 }
 
 .top_title {

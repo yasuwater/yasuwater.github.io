@@ -75,6 +75,7 @@ height: 50px;
 
 
 .start {
+    display:block;
     width: 100px;
     text-align: center;
     margin:50px auto;    

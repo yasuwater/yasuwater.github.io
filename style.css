@@ -88,8 +88,8 @@ height: 50px;
     opacity: 0.7;
     }
 
-.start {
-        display:block;
+.start a {
+    display:block;
     height:50px;
     line-weight:50px;
 }

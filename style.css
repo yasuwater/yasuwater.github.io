@@ -18,8 +18,8 @@ body {
     }
 
 .top_contents {
-    margin-top: 50px;
-
+    width:80%;
+    margin:0 auto;
 }
 
 .top_title {

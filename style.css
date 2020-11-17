@@ -16,7 +16,6 @@ body {
 }
 
 .top_contents {
-    display: inline-block;
     margin-top: 50px;
     text-align:center;
 }
@@ -33,7 +32,7 @@ body {
     border-radius: 30px;
 }
 
-.top_message p{
+.top_message {
     width: 70%;
     margin-top: 20px;
     font-weight: bold;
@@ -50,6 +49,7 @@ body {
 
 .start a {
     display:block;
+    width:100px;
     height:50px;
     line-height:50px;
 }

@@ -13,11 +13,12 @@ body {
     background-image: url(top1.jpg);
     background-size: cover;
     opacity: 0.7;
-}
+    text-align:center;
+    }
 
 .top_contents {
     margin-top: 50px;
-    text-align:center;
+
 }
 
 .top_title {

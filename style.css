@@ -52,6 +52,7 @@ body {
 .start a {
     display:block;
     height:50px;
+    width:100px;
     line-height:50px;
 }
 

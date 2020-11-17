@@ -24,6 +24,7 @@ body {
 
 .top_title {
     width:600px;
+    margin:0 auto;
     height: 50px;
     font-size: 10px;
     color: white;
@@ -35,8 +36,7 @@ body {
 }
 
 .top_message {
-    width: 70%;
-    margin-top: 20px;
+    margin:0 auto;
     font-weight: bold;
 }
 

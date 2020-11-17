@@ -7,6 +7,11 @@ div {
   margin: 175px auto;
 }
 
+.test {
+  position: relative;
+  top:100px;
+  left:100px;
+}
 .drop {
   position: relative;
 width: 20px;

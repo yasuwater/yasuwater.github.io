@@ -4,28 +4,73 @@ a {
 
 body {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
 }
+
+.head {
+    background-color: tomato;
+    height: 50px;
+}
+
+.head_left {
+    float: left;
+}
+
+.head_right {
+    float: right;
+    line-height: 50px;
+}
+
+.box {
+    margin       : auto;
+    overflow     : hidden;
+    position     : relative;
+        top:200px;
+    
+    width        : 266px;
+    height       : 266px;
+    background   : linear-gradient(to bottom, #99ccff, #0059b3);
+    border-radius: 50%;
+  }
+
+  .box:hover {
+    margin       : auto;
+    overflow     : hidden;
+    position     : relative;
+    top:10pxpx;
+                                /* 図形のCSS */
+    width        : 500px;
+    height       : 500px;
+    background   : linear-gradient(to bottom, #99ccff, #0059b3);
+    border-radius: 50%;
+  }
+
 
 .top_wrapper {
     width: 100%;
     height: 650px;
-    background-image: url(top1.jpg);
+    background-image: url(/images/top1.jpg);
     background-size: cover;
     opacity: 0.7;
-    text-align:center;
-    margin:0 auto;
-    }
+}
+
+.top_wrapper p{
+width: 70%;
+margin: auto;
+margin-top: 20px;
+font-weight: bold;
+}
 
 .top_contents {
-    width:80%;
-    margin:0 auto;
+    display: inline-block;
+    margin-top: 50px;
 }
 
 .top_title {
     width:600px;
-    margin:0 auto;
-    height: 60px;
+    height: 50px;
+    margin:0 auto;    
+    text-align: center;
     font-size: 10px;
     color: white;
     background-color: rgb(0,0,255);
@@ -33,30 +78,6 @@ body {
     padding: 10px 10px;
     border: 1px solid;
     border-radius: 30px;
-}
-
-.top_message {
-    margin:0 auto;
-    font-weight: bold;
-}
-
-.start {       
-    width:100px;
-    margin:0 auto;
-    border: 1px solid;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: tomato;
-    color: white;
-    opacity: 0.7;
-    }
-
-.start a {
-    display:block;
-    height:50px;
-    width:100px;
-    line-height:50px;
-    margin:0 auto;
 }
 
 .radio_form {
@@ -92,6 +113,17 @@ height: 50px;
 
 
 
+.start {
+    width: 100px;
+    text-align: center;
+    margin:50px auto;    
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: tomato;
+    color: white;
+    opacity: 0.7;
+    }
 
 .start:hover {
     opacity: 1;

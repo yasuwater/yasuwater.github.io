@@ -40,7 +40,6 @@ body {
     color:#FFF;
     border-radius: 50%;
     z-index:1;
-    transition:width 1s,height 1s;
   }
 
   .box:hover {

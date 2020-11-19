@@ -33,7 +33,6 @@ body {
     margin       : auto;
     overflow     : hidden;
     position     : relative;  
-    top:250px;
     width        : 50px;
     height       : 50px;
     background-color:#FFF;
@@ -46,7 +45,6 @@ body {
     margin       : auto;
     overflow     : hidden;
     position     : relative;
-      top:0px;
                                 /* 図形のCSS */
     width        : 500px;
     height       : 500px;

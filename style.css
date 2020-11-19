@@ -24,6 +24,7 @@ body {
 .drop {
 width:10px;
     height:50px;
+    background-color:#FFF;
     bordar-left:1px solid;
 }
 

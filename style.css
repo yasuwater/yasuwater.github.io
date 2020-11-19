@@ -47,6 +47,12 @@ body {
     border-radius: 50%;
   }
 
+.msg {
+   width:80%;
+   margin-left:20px;
+   margin-top:50px;
+}
+
 
 .top_wrapper {
     width: 100%;

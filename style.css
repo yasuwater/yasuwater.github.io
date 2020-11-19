@@ -44,6 +44,7 @@ body {
     color:#FFF;
     border-radius: 50%;
     z-index:1;
+    transition:all 1s ease;
   }
 
   .box:hover {

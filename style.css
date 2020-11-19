@@ -57,6 +57,7 @@ body {
 
 .msg {
    width:75%;
+   font-size:14px;
    font-family: 'M PLUS 1p', sans-serif;
    margin:50px 0 0 0;
 }

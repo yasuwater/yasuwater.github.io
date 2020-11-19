@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
 a {
     text-decoration: none;
 }
@@ -55,6 +57,7 @@ body {
 
 .msg {
    width:75%;
+   font-family: 'M PLUS 1p', sans-serif;
    margin:50px 0 0 0;
 }
 

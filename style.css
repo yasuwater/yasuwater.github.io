@@ -30,6 +30,7 @@ body {
     width        : 50px;
     height       : 50px;
     background-color:#FFF;
+    color:#FFF;
     border-radius: 50%;
     z-index:1;
   }
@@ -43,6 +44,7 @@ body {
     width        : 500px;
     height       : 500px;
     background-color:#FFF;
+    color:rgb(45,54,77);
     border-radius: 50%;
   }
 

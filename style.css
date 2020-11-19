@@ -37,7 +37,7 @@ body {
     margin       : auto;
     overflow     : hidden;
     position     : relative;
-      top:250px;
+      top:0px;
                                 /* 図形のCSS */
     width        : 500px;
     height       : 500px;

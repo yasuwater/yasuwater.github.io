@@ -5,6 +5,7 @@ a {
 body {
     width: 80%;
     margin: auto;
+    bacjground-color:#3498DB;
 }
 
 .head {
@@ -29,7 +30,7 @@ body {
     
     width        : 266px;
     height       : 266px;
-    background   : linear-gradient(to bottom, #99ccff, #0059b3);
+    background   : linear-gradient(to bottom, #FFF, #FFF);
     border-radius: 50%;
   }
 
@@ -41,7 +42,7 @@ body {
                                 /* 図形のCSS */
     width        : 500px;
     height       : 500px;
-    background   : linear-gradient(to bottom, #99ccff, #0059b3);
+    background   : linear-gradient(to bottom, #FFF, #FFF);
     border-radius: 50%;
   }
 

@@ -25,9 +25,7 @@ body {
 .box {
     margin       : auto;
     overflow     : hidden;
-    position     : relative;
-        top:200px;
-    
+    position     : relative;  
     width        : 50px;
     height       : 50px;
     background   : linear-gradient(to bottom, #FFF, #FFF);
@@ -38,7 +36,6 @@ body {
     margin       : auto;
     overflow     : hidden;
     position     : relative;
-    top:10pxpx;
                                 /* 図形のCSS */
     width        : 500px;
     height       : 500px;

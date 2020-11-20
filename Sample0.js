@@ -10,8 +10,7 @@ function func1() { //計算
     document.getElementById("output2").innerHTML=input_num2;
 }
 
-function cal2() {
-    
+function cal2() {    
    let wi = document.getElementById("Btest").style.width;
     alert("幅は" + wi + "です");
 }

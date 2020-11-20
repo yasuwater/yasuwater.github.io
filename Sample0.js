@@ -10,6 +10,11 @@ function func1() { //計算
     document.getElementById("output2").innerHTML=input_num2;
 }
 
+function cal2() {
+alart("test");
+}
+
+
 function chk1(val) {
     let vol_avg = 0;
     

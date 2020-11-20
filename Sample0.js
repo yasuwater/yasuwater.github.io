@@ -12,7 +12,7 @@ function func1() { //計算
 
 function cal2() {    
    let obj = document.getElementById("Bid");
-    let w = oj.getBoundingClientRect().width;
+    let w = obj.getBoundingClientRect().width;
     alert("幅は" + w + "です");
 }
 

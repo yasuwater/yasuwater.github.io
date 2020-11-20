@@ -29,9 +29,9 @@ body {
     height: 0px;
     background: transparent;
     border-bottom: 150px solid #FFF;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-radius: 10px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 50px;
 }
 
 .drop {

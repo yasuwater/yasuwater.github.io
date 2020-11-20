@@ -11,7 +11,8 @@ function func1() { //計算
 }
 
 function cal2() {
-alart("test");
+    let wi = document.getElementById("Btest").style.width;
+alart("t幅は" + wi + "です");
 }
 
 

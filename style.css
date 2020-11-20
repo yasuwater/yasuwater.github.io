@@ -33,6 +33,11 @@ body {
     border-right: 50px solid transparent;
     border-radius: 50px;
 }
+.Btest {
+    width:100px;
+    height:100px;
+    background-color:#FFF;
+}
 
 .drop {
     width:10px;

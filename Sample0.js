@@ -11,7 +11,7 @@ function func1() { //計算
 }
 
 function cal2() {    
-   let wi = document.getElementById("Btest").style.width;
+   let wi = document.getElementById("Bid").style.width;
     alert("幅は" + wi + "です");
 }
 

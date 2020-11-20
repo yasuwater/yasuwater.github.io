@@ -11,7 +11,9 @@ function func1() { //計算
 }
 
 function cal2() {
-    alert("実行テスト");
+    
+   let wi = document.getElementById("Btest").style.width;
+    alert("幅は" + wi + "です");
 }
 
 

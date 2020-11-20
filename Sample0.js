@@ -11,8 +11,9 @@ function func1() { //計算
 }
 
 function cal2() {    
-   let wi = document.getElementById("Bid").style.width;
-    alert("幅は" + wi + "です");
+   let obj = document.getElementById("Bid");
+    let w = ocj.getBoundingClientRect().width;
+    alert("幅は" + w + "です");
 }
 
 

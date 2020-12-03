@@ -201,7 +201,7 @@ function cal1() { //水道料金を計算
 
         w_sum = rnd3(w_sum);
 
-        document.getElementById("cal_test").innerHTML= "水道料金は"+ w_sum + "円です";
+        document.getElementById("cal_test").innerHTML= "水道料金は基本料金＋"+ w_sum + "円です";
 }
 
 

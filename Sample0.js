@@ -1,6 +1,10 @@
-function MyFunction1() { //現在日時を取得する
-    document.getElementById("txt").innerHTML=Date();               
-}
+window.onload = function(){
+    document.getElementById("square-button").onclick = function() {
+        this.classList.toggle("blue");
+      };
+  };
+
+
 
 function func1() { //計算
     var input_num = document.getElementById("input_num").value;
@@ -10,17 +14,90 @@ function func1() { //計算
     document.getElementById("output2").innerHTML=input_num2;
 }
 
-function cal2() {    
-   let obj = document.getElementById("Bid");
-    let w = obj.getBoundingClientRect().width;
-    //alert("幅は" + w + "です");
-    obj.style.width = (w + 10) + "px";
+let kaido = 0 //バルブ開度
+let suiryo = 0 //瞬間的な水量(L/sec)
+let sum_suiryo = 0 //水量の合計
+let timer = "" //setinterval用の変数
+
+function sums() {
+    sum_suiryo = rnd3(sum_suiryo + suiryo);
+    document.getElementById("sum_suiryo").innerHTML=sum_suiryo; 
+    cal1();   //料金計算
+}
+
+function rnd3(x) { //少数第三位で四捨五入
+    return Math.round(x *1000)/1000
+}
+
+let d = 0
+function kaiten(d1) { //オブジェクトを任意の角度で回転
+d = d + d1
+document.getElementById("sbtn").style.transform = "rotate(" + d + "deg)";  
+}
+
+function clRight() { //蛇口を開く   
+    
+    kaido = kaido +0.5;
+    if(kaido === 10) {      //とりあえず10を全開する        
+        document.getElementById("kaido").innerHTML=kaido + "(全開)";
+        kaiten(22.5); 
+    } else if(kaido < 10){
+        kaiten(22.5);        
+        wChange(5);     
+        document.getElementById("kaido").innerHTML=kaido;
+    } else { //開度が10より大きい
+        kaido = 10
+    }       
+    suiryo = rnd3(kaido / 10 * 0.035);  　//開度に応じて瞬時の水量を計算
+    document.getElementById("suiryo").innerHTML=suiryo;
+
+    clearInterval(timer);
+    timer = setInterval(sums,100);
 }
 
 
-function chk1(val) {
-    let vol_avg = 0;
+function clLeft() { //蛇口を閉める
+    kaido = kaido - 0.5;
+    if(kaido === 0) {     
+        document.getElementById("kaido").innerHTML=kaido + "(全閉)";
+        kaiten(-22.5);   
+        wChange(-5); 
+        clearInterval(timer);
+        kaido  = 0
+    } else if(kaido > 0){
+        kaiten(-22.5);   
+        wChange(-5); 
+        document.getElementById("kaido").innerHTML=kaido;
+        clearInterval(timer);
+        timer = setInterval(sums,100);    
+    } else if(kaido < 0) {        
+        kaido = 0
+        clearInterval(timer); 
+    }       
+    suiryo = rnd3(kaido / 10 * 0.035); ////少数第三位で四捨五入
+    document.getElementById("suiryo").innerHTML=suiryo;
+
+
+}
+
+function wChange(adds) {    //widthを取得して変更する
+    let obj = document.getElementById("drop_anime");
+    //let w = obj.getBoundingClientRect().width;
+    //alert("幅は" + w + "です");
+    //obj.style.width = (w + adds) + "px";
+    let w = kaido / 10 * 100
+
+    if(kaido === 0){
+        obj.style.width = 0 + "px";
+    } else {
+        obj.style.width = w + "px";
+    }
     
+ }
+ 
+function chk1(val) {    
+    
+    let vol_avg = 0;    
     
     switch (val) {
         case "1":
@@ -49,7 +126,8 @@ function chk1(val) {
 
 function cal1() { //水道料金を計算
     //const vol = 1040;
-    var vol = document.getElementById("input_num").value;
+    //var vol = document.getElementById("input_num").value;
+    let vol = sum_suiryo / 1000
     let w_sum = 0;  //水道料金
     let s_sum = 0;  //下水道料金
     let city = "okazaki"; //地域指定
@@ -73,7 +151,7 @@ function cal1() { //水道料金を計算
             //alert("東京が選択されました");
             break;
         case "okazaki":
-            W_kihon = 520;
+            W_kihon = 0;
             W_level = [0,10,25,50,1000];
             W_tanka = [0,65,127,156,201];
             S_kihon = 700;
@@ -118,10 +196,12 @@ function cal1() { //水道料金を計算
             };        
         };
             
-        w_sum = Math.round((w_sum + W_kihon) * 1.1);
+        w_sum = (w_sum + W_kihon) * 1.1;
         s_sum = Math.round((s_sum + S_kihon)* 1.1);
 
-        document.getElementById("cal_test").innerHTML= "水道料金は"+ w_sum + "円、下水道料金は" + s_sum +"円です。" ;
+        w_sum = rnd3(w_sum);
+
+        document.getElementById("cal_test").innerHTML= "水道料金は"+ w_sum + "円です";
 }
 
 
